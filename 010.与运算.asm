@@ -1,0 +1,9 @@
+mov ax,0xff00
+mov bx,0x00ff
+and ax,bx
+
+end:
+	jmp 0x7C00:end
+
+times 510-($-$$) db 0x00
+db 0x55,0xAA
